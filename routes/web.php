@@ -19,8 +19,7 @@ Route::get('/','HomeController@main');
 
 Auth::routes();
 Route::get('/adminpanel','HomeController@panel')->middleware('auth');
-//Route::get('/home', 'HomeController@index');
-//Files
+
 Route::post('/stadd','FileController@store');
 Route::get('/getimages','FileController@getimages');
 Route::post('/deletefile','FileController@deleteImage');
