@@ -1,0 +1,60 @@
+<div class='message' ng-if='$ctrl.message'>{{$ctrl.message}}</div>
+<div class='container apanel'>
+<div class='col-lg-2 list'>
+	<ul class='list-items'>
+		<li class='first-item'><a ng-click='$ctrl.opennewcat()'>New</a></li>
+		<li ng-repeat='cat in $ctrl.categories'>
+		    <a ng-click='$ctrl.choosecat(cat.id)'>{{cat.name}}
+		    <button class='btn-delete' ng-click='$ctrl.deletecat(cat)'>
+		    <span class="glyphicon glyphicon-remove"></span>
+		    </button>
+		    </a>
+		</li>
+	</ul>
+</div>
+
+<div class='col-lg-3'>
+
+</div>
+
+<div ng-if='$ctrl.maincat && $ctrl.maincat.name' class='col-lg-7 posts cat'>
+
+<h2 class='name'> {{ $ctrl.maincat.name }}</h2>
+	Edit category
+<div class='catdata'>
+	<label>
+		Name:
+	</label><br />
+		<input ng-model='$ctrl.maincat.name' />
+	<label>
+		Description:
+	</label><br />
+		<textarea ng-model='$ctrl.maincat.description'></textarea>
+	<button class='btn-savepost' ng-click='$ctrl.savecat()'>
+		<span class="glyphicon glyphicon-floppy-save"></span>
+	</button>
+</div>
+
+</div>
+
+<div ng-if='$ctrl.newcat' class='col-lg-7 posts cat'>
+New category
+<div class='catdata'>
+
+	<label>
+		Name:
+	</label><br />
+		<input ng-model='$ctrl.newcatname' />
+	<label>
+		Description:
+	</label><br />
+		<textarea ng-model='$ctrl.newcatdescription'></textarea>
+	<button class='btn-savepost' ng-click='$ctrl.addnewcat()'>
+		<span class="glyphicon glyphicon-floppy-save"></span>
+	</button>
+</div>
+
+
+</div>
+
+</div>

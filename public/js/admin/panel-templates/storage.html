@@ -1,0 +1,27 @@
+<div class='container apanel'>
+
+<div class='col-lg-2 upload'>
+	<div class='upload-image'>
+	<input class='fileup' type="file" file-model='$ctrl.myfile'>
+	<button class='btn-upload' ng-click='$ctrl.uploadFile()'>
+		<span class="glyphicon glyphicon-download-alt"></span>
+	</button>
+
+	</div>
+</div>
+<div  class='col-lg-7 imgs'>
+	<div class="images">
+	<div class='img' ng-repeat='x in $ctrl.images'>
+		<img width="200" height="200"  src='/storage/images/{{x}}' class='im' ng-click='$ctrl.selectImg(x)'>
+		<button class='btn-rem' ng-click='$ctrl.deleteImage(x)'>X</button>
+	</div>
+	</div>
+</div>
+<div class='selectedImg' ng-if="$ctrl.selimg">
+	<img width="100" height="100" src="/storage/images/{{$ctrl.selimg}}" class='im'>
+</div>
+<div class='xy'>
+	x: <input type="number"  min='100'  step='10' max='1100' ng-model='$ctrl.img.x'><br />
+	y: <input type="number" min='100' step='10' max='1100' ng-model='$ctrl.img.y'><br />
+</div>
+

@@ -1,0 +1,22 @@
+<div class='col-lg-2 col-sm-2 col-xs-2 cork'>
+</div>
+<div class='col-lg-9 col-sm-7 col-xs-6 white'>
+<!--<span class='notify' ng-if="$ctrl.search.query">
+    Search results for {{ $ctrl.search.query }}
+    <span style="font-size: 0.78em;">(click on 'Show more' to see more results)</span>
+</span>-->
+  <h3 class='overtitle' ng-if="$ctrl.catName"> {{$ctrl.catName}} </h3>
+    <h3 class='overtitle' ng-if="!$ctrl.catName"> All posts </h3>
+ <span class='no-posts' ng-if="$ctrl.manager.cur_data.length == 0">
+ <h3> No posts here yet =( </h3>
+ </span>
+ 	<div class='post' ng-if="$ctrl.category">{{ $ctrl.category }}</div>
+	<div class='post' ng-repeat='post in $ctrl.manager.cur_data | filter:$ctrl.search.query'>
+		  <div class='title'><a href='#!/post/{{post.id}}'>{{post.name}}</a></div>
+		  <div class='meta'><span class='glyphicon glyphicon-calendar'></span>&nbsp;{{post.created_at}}</div>
+		 <div class='content' ng-bind-html="post.content.substr(0,700).concat('...')"></div>
+	</div>
+	<button ng-if="$ctrl.manager.points[0] != $ctrl.manager.points[1] && $ctrl.manager.cur_data.length" class='btn-more' ng-click='$ctrl.manager.chPage()'>More<br><span class="glyphicon glyphicon-triangle-bottom"></span> </button>
+
+	</ul>
+</div>

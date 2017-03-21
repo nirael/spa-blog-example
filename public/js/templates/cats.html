@@ -1,0 +1,9 @@
+<div class="col-lg-2 col-sm-2 col-xs-2 dark">
+ <ul class='links'>
+ 	<li class='link-header'>Categories</li>
+ 	<li class='link' ng-repeat='cat in categories.cats'>
+         <a href='#!/categories/{{ cat.id }}'>{{cat.name}}</a>
+ 	</li>
+ </ul>
+ <recent></recent>
+</div>

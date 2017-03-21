@@ -1,0 +1,271 @@
+body{
+	color:#e24d13;
+	background-color: white;
+}
+code{
+	background-color: gray;
+	color:green;
+}
+button:focus,input:focus,textarea:focus{
+	outline: none !important;
+}
+a:hover{
+	cursor: pointer;
+	font-weight: bolder;
+}
+a:active,a:hover,a:focus{
+	text-decoration: none !important;
+}
+a:focus{
+	color:red;
+}
+.navbar-brand:hover{
+	color:green !important;
+}
+.ct{
+
+
+}
+.white{
+
+	/*border-right: 0.5px solid #d21767;*/
+	margin: 50px 0px 0px 50px;
+
+}
+
+.col-lg-2{
+	
+}
+.col-lg-8{
+	
+}
+.col-lg-9:first-child{
+	margin-top: 30px;
+}
+.navbar{
+	background-color: #040404;
+}
+.dark{
+	position: fixed;
+	left:0;
+	margin: 0px 0px 0px 0px;
+	padding: 50px 0px 500px 0px;
+	background-color: #040404;
+	height: 100%;
+
+}
+.cork{
+	padding: 20px;
+}
+.navbar-default{
+	border-bottom: 5px solid #d21767;
+	border-left: 2px solid white;
+}
+.container{
+
+	z-index: 200;
+	width: 100%;
+
+}
+/* Search & Upper nav*/
+.navbar-brand{
+	font-weight: bolder;
+	color:white !important;
+	font-size: 1.2em;
+}
+.btn-src{
+	background-color: #3097d1;
+	color:white;
+	font-weight: bolder;
+	border:none;
+	margin-left: 5px;
+	border-radius: 10px;
+	padding: 5px 10px 5px 10px;
+}
+.search-field{
+	border:1px solid gray;
+	width: 200px;
+	border-radius: 10px;
+	background-color: white;
+	color:black;
+	padding:4px;
+}
+ul.nav > li > a{
+	font-size: 1.2em;
+	color: white !important;
+	font-weight: bolder;
+	padding-left: 10px;
+}
+/* Posts */
+
+.post{
+	padding: 15px;
+	box-shadow: 3px 3px 2px 2px #bfc7c6;
+	margin: 15px;
+	background-color:  #f7f7f7;
+	overflow: auto;
+
+}
+.title{
+	text-align: center;
+	font-size:1.6em;
+	margin:5px;
+}
+.content{
+	color:black;
+	margin:5px;
+	word-break: break-all;
+
+}
+.btn-more{
+	width: 100%;
+	background-color: transparent;
+	border:none;
+	color:black;
+	margin-left:-10px;
+	padding: 10px;
+	font-weight:bolder;
+	font-size: 1.2em;
+	color:red;
+
+}
+/* Ad */
+.adblock{
+	margin: 90px 0px 0px 0px;
+	padding-left: 40px;
+}
+.ad{
+
+}
+/* Links */
+ul.links{
+	list-style-type: none;
+	margin:0px 0px 30px 0px;
+
+}
+li.link{
+	padding: 5px;
+	background-color: #2b2424;
+	border-left:5px solid orange;
+	border-right:5px solid orange;
+	margin:5px 0px 0px -40px;
+	border-bottom:1px solid white;
+	display: block;
+	cursor: pointer;
+	padding-left: 20px;
+}
+li.link,li.link-header{
+}
+li.link-header{
+	background-color: #0c122d;
+	padding: 7px 7px 7px 0px;
+	font-size: 1.2em;
+	margin: 5px 0px 5px -40px;
+	text-align: center;
+	color:white;
+	font-weight: bolder;
+	border-left:5px solid #6aada4;
+	border-right:5px solid #6aada4;
+
+}
+li.link a{
+	color:white;
+	display: block;
+}
+
+.overtitle{
+	font-size: 2.7em;
+	font-weight: bolder;
+	margin: 30px 10px 30px 0px;
+	text-align: center;
+	color:#130742;
+}
+/* Single post */
+.single{
+	padding: 20px;
+	margin: 70px 10px 20px 80px;
+}
+.post-stuffing{
+	color:blue;
+}
+.single-post-title{
+	font-size: 1.5em;
+	text-align: center;
+	color:blue;
+	font-weight: bolder;
+	margin: 10px 0px 20px 10px;
+}
+.single-post-meta{
+
+}
+.single-post-content{
+	margin: 10px;
+	font-size: 1.1em;
+	color:black;
+	word-break: break-all;
+}
+.ctl{
+	font-weight: bolder;
+	font-size: 1.6em;
+	color:green;
+	display: block;
+	text-align: center;
+	margin: 0px 0px 0px -10px;
+}
+.comment-section{
+	margin: 20px 0px  20px 0px;
+
+	padding: 10px;
+	color:black;
+	font-weight: bold;
+
+}
+.comments{
+	margin: 20px 0px 30px 0px;
+}
+.comment{
+	padding: 10px;
+	box-shadow: 3px 3.5px 3px 2px #584242;
+	margin: 15px 0px 15px 0px;
+}
+.message{
+	padding: 10px;
+}
+div.form > input{
+	width: 100%;
+}
+div.form > textarea{
+	width: 100%;
+}
+.btn-comment{
+	background-color: yellow;
+	padding: 5px 20px 5px 20px;
+	border: none;
+	font-size: 1.1em;
+	font-weight: bold;
+	border-radius: 10px;
+	margin: 5px 0px 0px 0px;
+}
+/* front-page */
+.welcome{
+	font-size: 3em;
+	text-align: left;
+	font-weight:bolder;
+	margin: 0px 0px 10px -40px;
+}
+.welcome-content{
+	margin: 40px 0px 0px 40px;
+	padding: 15px 10px 15px 10px;
+	font-size: 1.2em;
+	white-space: pre-wrap;
+	box-shadow: 2px 2px 2px 3px #476155;
+	box-sizing: border-box;
+	color:black;
+}
+.navbar{
+	width: 83.5%;
+	margin-left:16.6%;
+}
+.im{
+	margin:10px 0px 10px 0px;
+}

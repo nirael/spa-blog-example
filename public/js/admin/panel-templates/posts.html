@@ -1,0 +1,118 @@
+<div class='container apanel'>
+<div class='col-lg-2 list'>
+	<ul class='list-items'>
+		<li class='first-item'><a ng-click='$ctrl.opennewpost()'>New</a></li>
+		<li ng-repeat='post in $ctrl.posts'>
+		    <a ng-click='$ctrl.choosepost(post.id)'>{{post.name}}
+		    <button class='btn-delete' ng-click='$ctrl.deletepost(post)'>
+		    	<span class="glyphicon glyphicon-remove"></span>
+		    </button>
+		    </a>
+		</li>
+	</ul>
+</div>
+<div class='col-lg-3'>
+</div>
+<div ng-if='$ctrl.mainpost && $ctrl.mainpost.name' class='col-lg-7 thepost'>
+<div class='message' ng-if='$ctrl.message'>{{$ctrl.message}}</div>
+
+<h2 class='name'> {{ $ctrl.mainpost.name }}</h2>
+<div class='postdata'>
+	<label style="color:aqua;">
+		{{$ctrl.mainpost.created_at}}
+	</label><br />
+		<input class='post-name' ng-model='$ctrl.mainpost.name' />
+		<textarea  class='post-content' ng-model='$ctrl.mainpost.content'></textarea>
+	<select ng-model='$ctrl.mainpost.cat_id' class='cat-select'>
+		<option ng-repeat='cat in $ctrl.cats' value='{{cat.id}}'>{{cat.name}}</option>
+	</select>
+	<button class='set-img' ng-click='$ctrl.setImg()'>
+		<span class='glyphicon glyphicon-picture'></span>
+	</button>
+	<button class='btn-savepost' ng-click='$ctrl.savepost()'>
+		<span class="glyphicon glyphicon-floppy-save"></span>
+	</button>
+</div>
+<div class='postcomments'>
+		<h2 class='comment-tl'>Comments</h2>
+		<div ng-if='!$ctrl.postcomments.length' class='nocomments'> No comments </div>
+	<div class='comment' ng-repeat='com in $ctrl.postcomments'>
+	IP: {{ com.ip }} <br />
+	<label>
+		Author's name:
+	</label><br />
+		<input ng-model='com.name' /><br />
+	<label>
+		Author's email:
+	</label><br />
+		<input ng-model='com.email' /><br />
+	<label>
+		Author's message:
+	</label><br />
+		<textarea ng-model='com.message'></textarea>
+	<select ng-model='com.valid'>
+		<option ng-repeat="x in [{n:'Valid',v:1},{n:'Invalid',v:0}]" value='{{x.v}}'>{{ x.n }}</option>
+	</select><br />
+		<button class='btn-edit-comment' ng-click='$ctrl.editcomment(com)'>
+			<span class="glyphicon glyphicon-floppy-save"></span>
+		</button>
+		<button class='btn-delete-comment' ng-click='$ctrl.deletecomment(com)'>
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	</div>
+</div>
+</div>
+
+<div ng-if='$ctrl.newpost' class='col-lg-7 new thepost'>
+<h2 class='newpostttl'>New post</h2>
+<div class='postdata'>
+
+	<label>
+		Name:
+	</label><br />
+		<input class="post-name" ng-model='$ctrl.newpostname' />
+	<label>
+		Content:
+	</label><br />
+		<textarea class='post-content' ng-model='$ctrl.newpostcontent'></textarea>
+	<select ng-model='$ctrl.cat_id' class='cat-select'>
+		<option ng-repeat='cat in $ctrl.cats' value='{{cat.id}}'>{{cat.name}}</option>
+	</select>
+	<button class='set-img' ng-click='$ctrl.setImg()'>
+		<span class='glyphicon glyphicon-picture'></span>
+	</button>
+	<button class='btn-savepost' ng-click='$ctrl.addnewpost()'>
+		<span class="glyphicon glyphicon-floppy-save"></span>
+	</button>
+</div>
+
+
+</div>
+<div class='col-lg-7' ng-if="!$ctrl.newpost && !$ctrl.mainpost">
+			<h1 class='nothing'>Nothing special chosen =( </h1>
+</div>
+</div>
+<div class='selectedImg' ng-if="$ctrl.selimg != undefined">
+	<img width="100" height="100" src="/storage/images/{{$ctrl.selimg}}" class='im'>
+</div>
+<div class='ips' style="position: absolute;top:15%;left:20%;background-color: white;color:black;">
+		<div class='myctr'>
+ 				
+ 			<div class='half' style="width: 50%;float:left;">
+ 			  <div class='ctrlist'>
+ 				<ul ng-repeat='x in $ctrl.ips'>
+ 					<li>{{x.ip}} <button class='btn btn-danger' ng-click='$ctrl.ban(x)'>X</button></li>
+ 				</ul>
+ 			  </div>
+ 			</div>
+ 			<div class='half' style="width: 50%;float:left;">
+ 			  <div class='ctrlist'>
+ 				<ul  ng-if='$ctrl.banlist.length' ng-repeat='x in $ctrl.banlist'>
+ 					<li>{{x}} <button class='btn btn-primary' ng-click='$ctrl.unban(x)'>X</button> </li>
+ 				</ul>
+ 			  </div>
+ 			</div>
+ 		</div>
+
+
+</div>

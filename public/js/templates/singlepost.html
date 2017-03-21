@@ -1,0 +1,33 @@
+<div class='col-lg-2 col-sm-2 col-xs-1 cork'>
+</div>
+<div class='col-lg-9 col-sm-6 col-xs-6 single'>
+	<div class='post-stuffing'>
+		<div class='single-post-title'>{{$ctrl.data.post.name}}</div>
+		<div class='single-post-meta'>{{ $ctrl.data.post.created_at}}</div>
+		<div class='single-post-content' ng-bind-html="$ctrl.data.post.content"></div>
+
+	</div>
+	<div class='comment-section'>
+			<span class='ctl'>Comments</span>
+		<div class='leave-comment'>
+			<div class="comments">
+
+				<div ng-repeat='x in $ctrl.postcomments.comments'>
+					<div class='comment' ng-if="x.valid == '1'">
+					 <div class='author'><a href='{{x.email}}'>{{x.name}}</a></div>
+					 <div class='message'>{{x.message}}</div>
+					</div>
+		</div>
+	</div>
+			<div class='form'>
+				<label>Your name: </label><br>
+					<input type='text' required ng-model='$ctrl.name'><br>
+
+				<label>Your email: </label><br>
+					<input type='text' required ng-model='$ctrl.email'><br>
+
+				<label>Message: </label><br>
+					<textarea type='text' required ng-model='$ctrl.message' cols="15" rows="5"></textarea>
+				<button class='btn-comment' ng-click='$ctrl.sendComment()'><span class="glyphicon glyphicon-comment"></span> Send </button>
+			</div>
+</div>

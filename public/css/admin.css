@@ -1,0 +1,266 @@
+body{
+	background-image: url('/storage/images/mas4qEe1lH9VqQhY5uWrtH2D6to78n6sgwpOVnrK.jpeg');
+
+}
+a:focus,button:focus,textarea:focus,input:focus,select:focus{
+	outline: none;
+}
+a:hover{
+	cursor: pointer;
+	text-decoration: none;
+}
+button{
+	border:none;
+	background-color: transparent;
+	font-weight: bolder;
+}
+.navbar-brand:hover{
+	color:green !important;
+}
+/*mainpanel */
+
+.apanel{
+	width: 100%;
+}
+/* general lists */
+
+.list{
+	position: absolute;
+	left:2%;
+	top:5%;
+	
+	margin-top: -20px;
+	background-color: rgba(0,0,0,.8);
+	padding: 0px;
+	box-shadow: -1px 6px 13px 1px rgba(0,0,0,.9);
+	
+}
+.list-items{
+	padding-top: 100px;
+	padding-bottom: 50px;
+	list-style-type: none;
+	margin-left:-40px;
+}
+.list-items > li{
+	display: block;
+	cursor: pointer;
+	padding: 5px;
+	border-right: 3px solid orange;
+	border-left:3px solid orange;
+	border-bottom: 1px solid black;
+	background-color: white;
+	color:black;
+	margin: 5px 0px 5px 0px;
+	font-weight: bolder;
+
+}
+.list-items > li > a{
+	display: block;
+	color:black;
+}
+.first-item{
+	background-color: aqua !important;
+	padding: 3px;
+}
+.first-item > a{	
+	color:white !important;
+}
+.btn-delete{
+	float:right;
+	border:none;
+	background-color: transparent;
+	color:red;
+
+}
+.nothing{
+	font-weight: bolder;
+	color:white;
+}
+/* Post */
+.thepost{
+	color:white;
+	border:1px solid red;
+	padding-bottom: 40px;
+	background-color: rgba(0,0,0,.8);
+}
+.postdata > input,.postdata > textarea{
+	width: 100%;
+}
+.cat-select{
+	border:none;
+	background-color: transparent;
+	font-size: 1.3em;
+	color:white;
+	font-weight: bolder;
+}
+.cat-select > option{
+	color:black;
+}
+.name{
+	text-align: center;
+	color:#68e6bf;
+	margin:20px 0px 10px 0px;
+	font-weight: bolder;
+}
+.post-name{
+	padding: 3px;
+	font-weight: bolder;
+	margin:10px 0px 10px 0px;
+}
+.post-content{
+	height: 500px;
+	padding: 7px;
+	margin-bottom: 10px;
+}
+.post-name,.post-content{
+	color:white;
+	background-color: black;
+}
+.newpostttl{
+
+}
+.new-post-content{
+
+}
+.new{
+	color:white;
+}
+/* Comment */
+.comment{
+	border:1px solid black;
+	padding: 10px;
+	margin-bottom: 10px;
+	color:white;
+	background-color: black;
+	border:1px solid white;
+}
+.comment-tl{
+	text-align: center;
+	font-weight: bolder;
+	margin:0px 10px 30px 10px;
+	color:#0079ff;
+}
+div.comment > input , div.comment > textarea{
+	width: 100%;
+	color:black;
+}
+div.comment > select{
+	color:white;
+	border:none;
+	margin: 5px 0px 5px 0px;
+	background-color: transparent;
+	font-size:1.2em;
+}
+div.comment > select > option{
+	color:black;
+}
+/* Categories */
+.catdata > input,.catdata > textarea{
+	width: 100%;
+	padding:5px;
+	color:black;
+}
+.catdata > textarea{
+	height: 300px;
+}
+.cat{
+	border:1px solid red;
+	padding: 20px 10px 20px 10px;
+	color:white;
+	font-weight: bold;
+	background-color: rgba(0,0,0,.8);
+}
+/* Storage */
+.upload{
+	border:1px solid white;
+	padding: 10px;
+}
+.img{
+	position: relative;
+	display: inline;
+}
+.im{
+	margin: 5px;
+	cursor: pointer;
+}
+.im:hover{
+	box-shadow: 1px 1px 2px 2px white;
+}
+.btn-rem{
+	color:red;
+	background-color: transparent;
+	border:none;
+	position: absolute;
+	top:-20%;
+	left:0%;
+	margin: -41% 0px 0px 5px;
+}
+.imgs{
+	padding: 10px;
+	border:1px solid white;
+	background-color: rgba(0,0,0,.7);
+	margin-left:10px;
+}
+.selectedImg{
+	position: fixed;
+	top:10%;
+	right: 2%;
+}
+.xy{
+	padding: 10px;
+	border:2px solid red;
+	background-color: rgba(0,0,0,.6);
+	position: fixed;
+	top:30%;
+	right: 2%;
+	color:white;
+}
+.xy > input{
+	background-color: transparent;
+	font-weight: bolder;
+
+}
+/* Different buttons */
+
+.set-img{
+	
+}
+.btn-savepost{
+}
+.set-img,.btn-savepost{
+	color:white;
+	font-size: 1.3em;
+}
+.set-img:hover,.btn-savepost:hover,.cat-select:hover{
+	color:aqua;
+	cursor: pointer;
+}
+.btn-delete-comment,.btn-edit-comment{
+	font-size: 1.3em;
+	color:yellow;
+}
+.btn-delete-comment:hover,.btn-edit-comment:hover{
+	color:green;
+	cursor: pointer;
+}
+.btn-upload{
+	font-size: 1.5em;
+	color:#68e6bf;
+	display: inline;
+	float: right;
+
+}
+.btn-upload:hover{
+	font-size: 1.55em;
+	color:white;
+}
+.fileup{
+	border:1px solid white;
+	background-color: transparent;
+	color:white;
+	
+	display: inline;
+	float:left;
+	
+	width: 53.5%;
+}
