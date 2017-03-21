@@ -26,7 +26,5 @@ class HomeController extends Controller
     public function panel(){
         return view('admin');
     }
-    public function unit1(){
-        return view('test');
-    }
+    
 }
